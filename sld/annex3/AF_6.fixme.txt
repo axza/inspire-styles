@@ -1,0 +1,29 @@
+<StyledLayerDescriptor version="1.1.0" xsi:schemaLocation="http://www.opengis.net/sld StyledLayerDescriptor.xsd" xmlns:sld="http://www.opengis.net/sld" xmlns:ogc="http://www.opengis.net/ogc" xmlns:se="http://www.opengis.net/se" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><sld:NamedLayer>
+<se:Name> AF.Plot.Default</se:Name>
+<sld:UserStyle>
+<se:Name<sld:NamedLayer>
+<se:Name> AF.AgriBuilding.Default</se:Name>
+<sld:UserStyle>
+<se:Name>INSPIRE_Default</se:Name>
+<sld:IsDefault>1</sld:IsDefault>
+<se:FeatureTypeStyle version="1.1.0">
+<se:Description>
+<se:Title>Agricultural and Aquaculture AgriBuilding Default
+Style</se:Title>
+<se:Abstract> The geometry is rendered as a circle with a size of 3
+pixels, with a Green (#808000) fill and a black outline
+(#000000)</se:Abstract>
+</se:Description>
+<se:FeatureTypeName>AF.AgriBuilding</se:FeatureTypeName>
+<se:Rule>
+<se:PolygonSymbolizer>
+<se:Geometry>
+<ogc:PropertyName>AgriByuilding.geometry</ogc:PropertyName>
+</se:Geometry>
+<se:Fill/>
+<se:Stroke/>
+</se:PolygonSymbolizer>
+</se:Rule>
+</se:FeatureTypeStyle>
+</sld:UserStyle>
+</sld:NamedLayer></StyledLayerDescriptor>

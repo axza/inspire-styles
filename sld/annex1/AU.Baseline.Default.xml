@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--
+   Source http://inspire.jrc.ec.europa.eu/documents/Data_Specifications/INSPIRE_DataSpecification_AU_v3.1.pdf
+   http://github.com/JuergenWeichand/inspire-styles (2016-09-18 01:47:46)
+-->
+<StyledLayerDescriptor xmlns:sld="http://www.opengis.net/sld" xmlns:ogc="http://www.opengis.net/ogc" xmlns:se="http://www.opengis.net/se" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1.0" xsi:schemaLocation="http://www.opengis.net/sld StyledLayerDescriptor.xsd">
+  <sld:NamedLayer>
+    <se:Name>AU.Baseline</se:Name>
+    <sld:UserStyle>
+      <se:Name>AU.Baseline.Default </se:Name>
+      <sld:IsDefault>1</sld:IsDefault>
+      <se:FeatureTypeStyle version="1.1.0">
+        <se:Description>
+          <se:Title>Baseline Default Style
+</se:Title>
+          <se:Abstract> The Baseline is rendered using a dashed red (#DC143C)
+line.
+.</se:Abstract>
+        </se:Description>
+        <se:FeatureTypeName>Baseline</se:FeatureTypeName>
+        <se:Rule>
+          <se:LineSymbolizer>
+            <se:Geometry>
+              <ogc:PropertyName>segment:geometry</ogc:PropertyName>
+            </se:Geometry>
+            <se:Stroke>
+              <se:SvgParameter name="stroke">#DC143C</se:SvgParameter>
+              <se:SvgParameter name="stroke-width">4</se:SvgParameter>
+              <sld:CssParameter name="stroke-dasharray">10.0 10.0</sld:CssParameter>
+            </se:Stroke>
+          </se:LineSymbolizer>
+        </se:Rule>
+      </se:FeatureTypeStyle>
+    </sld:UserStyle>
+  </sld:NamedLayer>
+</StyledLayerDescriptor>

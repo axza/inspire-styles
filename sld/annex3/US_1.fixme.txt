@@ -1,0 +1,23 @@
+<StyledLayerDescriptor version="1.1.0" xsi:schemaLocation="http://www.opengis.net/sld StyledLayerDescriptor.xsd" xmlns:sld="http://www.opengis.net/sld" xmlns:ogc="http://www.opengis.net/ogc" xmlns:se="http://www.opengis.net/se" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><sld:NamedLayer>
+<se:Name>US.EnvironmentalManagementInstallation</se:Name>
+<sld:UserStyle>
+<se:Name> US.EnvironmentalManagementInstallation </se:Name>
+<sld:IsDefault>1</sld:IsDefault>
+<se:FeatureTypeStyle version="1.1.0" xmlns:PS="urn:xinspire:
+specification:EnvironmentalManagementFacility:3.1">
+<se:Description>
+<se:Title> Environmental Man-agement Facility – Installation Style </se:Title>
+<se:Abstract>Point geometries are rendered as a triangle with a size of 5 pixels,
+with a 50% grey (#808080) fill and a black outline.</se:Abstract>
+</se:Description>
+<se:FeatureTypeName>US:EnvironmentalManagementFacility</se:FeatureTypeName>
+<se:Rule>US:EnvironmentalManagementFacility.type=‘installation‘</se:Rule>
+<se:PointSymbolizer>
+<se:Geometry>
+<ogc:PropertyName>US:geometry</ogc:PropertyName>
+</se:Geometry>
+</se:PointSymbolizer>
+</se:Rule>
+</se:FeatureTypeStyle>
+</sld:UserStyle>
+</sld:NamedLayer></StyledLayerDescriptor>

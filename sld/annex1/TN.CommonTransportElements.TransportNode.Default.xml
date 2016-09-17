@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--
+   Source http://inspire.jrc.ec.europa.eu/documents/Data_Specifications/INSPIRE_DataSpecification_TN_v3.1.pdf
+   http://github.com/JuergenWeichand/inspire-styles (2016-09-18 01:48:00)
+-->
+<StyledLayerDescriptor xmlns:sld="http://www.opengis.net/sld" xmlns:ogc="http://www.opengis.net/ogc" xmlns:se="http://www.opengis.net/se" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1.0" xsi:schemaLocation="http://www.opengis.net/sld StyledLayerDescriptor.xsd">
+  <sld:NamedLayer>
+    <se:Name>TN.CommonTransportElements.TransportNode</se:Name>
+    <sld:UserStyle>
+      <se:Name> TN.CommonTransportElements.TransportNode.Default</se:Name>
+      <sld:IsDefault>1</sld:IsDefault>
+      <se:FeatureTypeStyle version="1.1.0">
+        <se:Description>
+          <se:Title>Generic Node Default Style</se:Title>
+          <se:Abstract>The geometry is rendered as a circle with a size of 3
+pixels, with a red (#FF0000) fill and a black outline (#000000).</se:Abstract>
+        </se:Description>
+        <se:FeatureTypeName>Network:Node</se:FeatureTypeName>
+        <se:Rule>
+          <se:PointSymbolizer>
+            <se:Geometry>
+              <ogc:PropertyName>Network:geometry
+</ogc:PropertyName>
+            </se:Geometry>
+            <se:Graphic/>
+          </se:PointSymbolizer>
+        </se:Rule>
+      </se:FeatureTypeStyle>
+    </sld:UserStyle>
+  </sld:NamedLayer>
+</StyledLayerDescriptor>

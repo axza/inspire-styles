@@ -1,0 +1,63 @@
+<StyledLayerDescriptor version="1.1.0" xsi:schemaLocation="http://www.opengis.net/sld StyledLayerDescriptor.xsd" xmlns:sld="http://www.opengis.net/sld" xmlns:ogc="http://www.opengis.net/ogc" xmlns:se="http://www.opengis.net/se" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><sld:NamedLayer>
+<se:Name>HH.Event.Default</se:Name>
+<sld:UserStyle>
+<se:Name>HH.Event.Default</se:Name>
+<sld:IsDefault>1</sld:IsDefault>
+<se:FeatureTypeStyle version="1.1.0">
+<se:Description>
+<se:Title>Default Style</se:Title>
+<se:Abstract></se:Abstract>
+</se:Description>
+<se:FeatureTypeName>HH.Event</se:FeatureTypeName>
+<Rule>
+<se:PolygonSymbolizer>
+<se:Geometry>
+<ogc:PropertyName>locationUnit.geometry</ogc:PropertyName>
+</se:Geometry>
+<se:Stroke>
+<se:SvgParameter
+name="stroke">#ff0000</se:SvgParameter>
+<se:SvgParameter name="strokewidth">3</se:SvgParameter>
+</se:Stroke>
+
+</se:PolygonSymbolizer>
+</Rule>
+<Rule>
+<se:LineSymbolizer>
+<se:Geometry>
+<ogc:PropertyName>locationUnit.geometry</ogc:PropertyName>
+</se:Geometry>
+<se:Stroke>
+<se:SvgParameter
+name="stroke">#ff0000</se:SvgParameter>
+<se:SvgParameter name="strokewidth">3</se:SvgParameter>
+</se:Stroke>
+</se:LineSymbolizer>
+</Rule>
+<Rule>
+<se:PointSymbolizer>
+<se:Geometry>
+
+Minimum &
+maximum
+scales
+
+<ogc:PropertyName>locationUnit.geometry</ogc:PropertyName>
+</se:Geometry>
+<se:Graphic>
+<se:Mark>
+<se:WellKnownName>circle</se:WellKnownName>
+<se:Fill>
+<se:SvgParameter
+name="fill">#ff0000</se:SvgParameter>
+</se:Fill>
+</se:Mark>
+<se:Size>
+<se:SvgParameter name="size">3</se:SvgParameter>
+</se:Size>
+</se:Graphic>
+</se:PointSymbolizer>
+</Rule>
+</se:FeatureTypeStyle>
+</sld:UserStyle>
+</sld:NamedLayer></StyledLayerDescriptor>

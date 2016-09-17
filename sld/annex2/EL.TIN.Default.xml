@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--
+   Source http://inspire.jrc.ec.europa.eu/documents/Data_Specifications/INSPIRE_DataSpecification_EL_v3.0.pdf
+   http://github.com/JuergenWeichand/inspire-styles (2016-09-18 01:48:08)
+-->
+<StyledLayerDescriptor xmlns:sld="http://www.opengis.net/sld" xmlns:ogc="http://www.opengis.net/ogc" xmlns:se="http://www.opengis.net/se" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1.0" xsi:schemaLocation="http://www.opengis.net/sld StyledLayerDescriptor.xsd">
+  <sld:NamedLayer>
+    <se:Name>EL.TIN</se:Name>
+    <sld:UserStyle>
+      <se:Name>EL.TIN.Default</se:Name>
+      <sld:IsDefault>1</sld:IsDefault>
+      <se:FeatureTypeStyle version="1.1.0">
+        <se:Description>
+          <se:Title>Elevation TIN Default Style</se:Title>
+          <se:Abstract>Geometries composing an ElevationTIN are rendered
+according their type: stopLines are (#7F8850) 2 pixel width lines; breakLines
+are (#CF7916) 2 pixel width lines; controlPoints are black(#000000) 1 pixel
+circles of size 10;</se:Abstract>
+        </se:Description>
+        <se:FeatureTypeName>ElevationTIN</se:FeatureTypeName>
+        <se:Rule>
+          <se:MinScaleDenominator>1</se:MinScaleDenominator>
+          <se:MaxScaleDenominator>100000</se:MaxScaleDenominator>
+          <se:LineSymbolizer>
+            <se:Geometry>
+              <ogc:PropertyName>geometries:stopLines</ogc:PropertyName>
+            </se:Geometry>
+            <se:Stroke>
+              <se:SvgParameter name="stroke">#7F8850</se:SvgParameter>
+              <se:SvgParameter name="stroke-width">2</se:SvgParameter>
+            </se:Stroke>
+          </se:LineSymbolizer>
+          <se:LineSymbolizer>
+            <se:Geometry>
+              <ogc:PropertyName>geometries:breakLines</ogc:PropertyName>
+            </se:Geometry>
+            <se:Stroke>
+              <se:SvgParameter name="stroke">#CF7916</se:SvgParameter>
+              <se:SvgParameter name="stroke-width">2</se:SvgParameter>
+            </se:Stroke>
+          </se:LineSymbolizer>
+          <se:PointSymbolizer>
+            <se:Geometry>
+              <ogc:PropertyName>geometries:controlPoint</ogc:PropertyName>
+            </se:Geometry>
+            <se:Graphic>
+              <se:Mark>
+                <se:WellKnownName>circle</se:WellKnownName>
+                <se:Stroke>
+                  <se:SvgParameter name="stroke">#000000</se:SvgParameter>
+                  <se:SvgParameter name="strokewidth">1</se:SvgParameter>
+                </se:Stroke>
+              </se:Mark>
+              <se:Size>
+                <se:SvgParameter name="size">10</se:SvgParameter>
+              </se:Size>
+            </se:Graphic>
+          </se:PointSymbolizer>
+        </se:Rule>
+      </se:FeatureTypeStyle>
+    </sld:UserStyle>
+  </sld:NamedLayer>
+</StyledLayerDescriptor>

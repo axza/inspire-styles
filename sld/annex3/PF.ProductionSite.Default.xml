@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--
+   Source http://inspire.jrc.ec.europa.eu/documents/Data_Specifications/INSPIRE_DataSpecification_PF_v3.0.pdf
+   http://github.com/JuergenWeichand/inspire-styles (2016-09-18 01:48:57)
+-->
+<StyledLayerDescriptor xmlns:sld="http://www.opengis.net/sld" xmlns:ogc="http://www.opengis.net/ogc" xmlns:se="http://www.opengis.net/se" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1.0" xsi:schemaLocation="http://www.opengis.net/sld StyledLayerDescriptor.xsd">
+  <sld:NamedLayer>
+    <se:Name>PF.ProductionSite</se:Name>
+    <sld:UserStyle>
+      <se:Name>PF.ProductionSite.Default</se:Name>
+      <sld:IsDefault>1</sld:IsDefault>
+      <se:FeatureTypeStyle version="1.1.0">
+        <se:Description>
+          <se:Title> Production Site Default Style </se:Title>
+          <se:Abstract> The geometry is rendered using fill color Pink (#FF00FF) and a
+solid Black outline with a stroke width of 1 pixel. name attribute: in Arial
+10 black (#000000)</se:Abstract>
+        </se:Description>
+        <se:FeatureTypeName>PF.ProductionSite</se:FeatureTypeName>
+        <se:Rule>
+          <se:PolygonSymbolizer>
+            <se:Geometry>
+              <ogc:PropertyName>ProductionSite:geometry
+</ogc:PropertyName>
+            </se:Geometry>
+            <se:Graphic/>
+          </se:PolygonSymbolizer>
+        </se:Rule>
+      </se:FeatureTypeStyle>
+    </sld:UserStyle>
+  </sld:NamedLayer>
+</StyledLayerDescriptor>

@@ -1,0 +1,90 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--
+   Source http://inspire.jrc.ec.europa.eu/documents/Data_Specifications/INSPIRE_DataSpecification_BU_v3.0.pdf
+   http://github.com/JuergenWeichand/inspire-styles (2016-09-18 01:48:31)
+-->
+<StyledLayerDescriptor xmlns:sld="http://www.opengis.net/sld" xmlns:ogc="http://www.opengis.net/ogc" xmlns:se="http://www.opengis.net/se" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1.0" xsi:schemaLocation="http://www.opengis.net/sld StyledLayerDescriptor.xsd">
+  <sld:NamedLayer>
+    <se:Name>BU.BuildingPart</se:Name>
+    <sld:UserStyle>
+      <se:Name>BU.BuildingPart.Default</se:Name>
+      <sld:IsDefault>1</sld:IsDefault>
+      <se:FeatureTypeStyle version="1.1.0">
+        <se:Description>
+          <se:Title>Building part default style</se:Title>
+          <se:Abstract/>
+        </se:Description>
+        <se:FeatureTypeName>BU/Buildings/BuildingPart</se:FeatureTypeName>
+        <Rule>
+          <se:MinScaleDenominator>50</se:MinScaleDenominator>
+          <se:MaxScaleDenominator>10000</se:MaxScaleDenominator>
+          <se:Filter>
+            <se:And>
+              <se:PropertyIsEqualTo>
+                <se:Function name="in2">
+                  <se:Function name="geometryType">
+                    <se:PropertyName>geometry2D/geometry</se:PropertyName>
+                  </se:Function>
+                  <se:Literal>Polygon</se:Literal>
+                  <se:Literal>MultiPolygon</se:Literal>
+                </se:Function>
+                <se:Literal>true</se:Literal>
+              </se:PropertyIsEqualTo>
+              <se:PropertyIsEqualTo>
+                <se:PropertyName>geometry2D/referenceGeometry</se:PropertyName>
+                <se:Literal>true</se:Literal>
+              </se:PropertyIsEqualTo>
+            </se:And>
+          </se:Filter>
+          <se:PolygonSymbolizer>
+            <se:Geometry>
+              <ogc:PropertyName>geometry2D/geometry</ogc:PropertyName>
+            </se:Geometry>
+            <se:Stroke>
+              <se:SvgParameter name="stroke">#000000</se:SvgParameter>
+              <se:SvgParameter name="strokewidth">0.2</se:SvgParameter>
+            </se:Stroke>
+          </se:PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <se:MinScaleDenominator>50</se:MinScaleDenominator>
+          <se:MaxScaleDenominator>10000</se:MaxScaleDenominator>
+          <se:Filter>
+            <se:And>
+              <se:PropertyIsEqualTo>
+                <se:Function name="in2">
+                  <se:Function name="geometryType">
+                    <se:PropertyName>geometry2D/geometry</se:PropertyName>
+                  </se:Function>
+                  <se:Literal>Point</se:Literal>
+                  <se:Literal>MultiPoint</se:Literal>
+                </se:Function>
+                <se:Literal>true</se:Literal>
+              </se:PropertyIsEqualTo>
+              <se:PropertyIsEqualTo>
+                <se:PropertyName>geometry2D/referenceGeometry</se:PropertyName>
+                <se:Literal>true</se:Literal>
+              </se:PropertyIsEqualTo>
+            </se:And>
+          </se:Filter>
+          <se:PointSymbolizer>
+            <se:Geometry>
+              <ogc:PropertyName>geometry2D/geometry</ogc:PropertyName>
+            </se:Geometry>
+            <se:Graphic>
+              <se:Mark>
+                <se:WellKnownName>circle</se:WellKnownName>
+                <se:Fill>
+                  <se:SvgParameter name="fill">#808080</se:SvgParameter>
+                </se:Fill>
+              </se:Mark>
+              <se:Size>
+                <se:SvgParameter> name="size"&gt;5</se:SvgParameter>
+              </se:Size>
+            </se:Graphic>
+          </se:PointSymbolizer>
+        </Rule>
+      </se:FeatureTypeStyle>
+    </sld:UserStyle>
+  </sld:NamedLayer>
+</StyledLayerDescriptor>

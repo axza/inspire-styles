@@ -1,0 +1,125 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--
+   Source http://inspire.jrc.ec.europa.eu/documents/Data_Specifications/INSPIRE_DataSpecification_SU_v3.0.pdf
+   http://github.com/JuergenWeichand/inspire-styles (2016-09-18 01:48:25)
+-->
+<StyledLayerDescriptor xmlns:sld="http://www.opengis.net/sld" xmlns:ogc="http://www.opengis.net/ogc" xmlns:se="http://www.opengis.net/se" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1.0" xsi:schemaLocation="http://www.opengis.net/sld StyledLayerDescriptor.xsd">
+  <sld:NamedLayer>
+    <se:Name>SU.VectorStatisticalUnits</se:Name>
+    <sld:UserStyle>
+      <se:Name>SU.VectorStatisticalUnits.Default</se:Name>
+      <sld:IsDefault>1</sld:IsDefault>
+      <se:FeatureTypeStyle version="1.1.0">
+        <se:Description>
+          <se:Title>Vector statistical units default Style</se:Title>
+          <se:Abstract/>
+        </se:Description>
+        <se:FeatureTypeName>SU.VectorStatisticalUnits</se:FeatureTypeName>
+        <Rule>
+          <se:Filter>
+            <se:And>
+              <se:PropertyIsEqualsTo>
+                <se:Function name="in2">
+                  <se:Function name="geometryType">
+                    <se:PropertyName>geometries.geometry</se:PropertyName>
+                  </se:Function>
+                  <se:Literal>Polygon</se:Literal>
+                  <se:Literal>MultiPolygon</se:Literal>
+                </se:Function>
+                <se:Literal>true</se:Literal>
+              </se:PropertyIsEqualsTo>
+              <se:PropertyIsEqualTo>
+                <se:ValueReference>
+geometries.geometryDescriptor.geometryType</se:ValueReference>
+                <se:Literal>referenceGeometry</se:Literal>
+              </se:PropertyIsEqualTo>
+            </se:And>
+          </se:Filter>
+          <se:PolygonSymbolizer>
+            <se:Geometry>
+              <ogc:PropertyName>geometries.geometry</ogc:PropertyName>
+            </se:Geometry>
+            <se:Fill>
+              <se:SvgParameter name="fill">#e4ff00</se:SvgParameter>
+              <se:SvgParameter name="fill-opacity">
+                <se:Literal>0.2</se:Literal>
+              </se:SvgParameter>
+            </se:Fill>
+            <se:Stroke>
+              <se:SvgParameter name="stroke">#ff00ff</se:SvgParameter>
+              <se:SvgParameter name="stroke-width">3</se:SvgParameter>
+            </se:Stroke>
+          </se:PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <se:Filter>
+            <se:And>
+              <se:PropertyIsEqualsTo>
+                <se:Function name="in3">
+                  <se:Function name="geometryType">
+                    <se:PropertyName>geometries.geometry</se:PropertyName>
+                  </se:Function>
+                  <se:Literal>LineString</se:Literal>
+                  <se:Literal>LinearRing</se:Literal>
+                  <se:Literal>MultiLineString</se:Literal>
+                </se:Function>
+                <se:Literal>true</se:Literal>
+              </se:PropertyIsEqualsTo>
+              <se:PropertyIsEqualTo>
+                <se:ValueReference>
+geometries.geometryDescriptor.geometryType</se:ValueReference>
+                <se:Literal>referenceGeometry</se:Literal>
+              </se:PropertyIsEqualTo>
+            </se:And>
+          </se:Filter>
+          <se:LineSymbolizer>
+            <se:Geometry>
+              <ogc:PropertyName>geometries.geometry</ogc:PropertyName>
+            </se:Geometry>
+            <se:Stroke>
+              <se:SvgParameter name="stroke">#ff00ff</se:SvgParameter>
+              <se:SvgParameter name="stroke-width">3.0</se:SvgParameter>
+            </se:Stroke>
+          </se:LineSymbolizer>
+        </Rule>
+        <Rule>
+          <se:Filter>
+            <se:And>
+              <se:PropertyIsEqualsTo>
+                <se:Function name="in2">
+                  <se:Function name="geometryType">
+                    <se:PropertyName>geometries.geometry</se:PropertyName>
+                  </se:Function>
+                  <se:Literal>Point</se:Literal>
+                  <se:Literal>MultiPoint</se:Literal>
+                </se:Function>
+                <se:Literal>true</se:Literal>
+              </se:PropertyIsEqualsTo>
+              <se:PropertyIsEqualTo>
+                <se:ValueReference>
+geometries.geometryDescriptor.geometryType</se:ValueReference>
+                <se:Literal>referenceGeometry</se:Literal>
+              </se:PropertyIsEqualTo>
+            </se:And>
+          </se:Filter>
+          <se:PointSymbolizer>
+            <se:Geometry>
+              <ogc:PropertyName>geometries.geometry</ogc:PropertyName>
+            </se:Geometry>
+            <se:Graphic>
+              <se:Mark>
+                <se:WellKnownName>circle</se:WellKnownName>
+                <se:Fill>
+                  <se:SvgParameter name="fill">#ff00ff</se:SvgParameter>
+                </se:Fill>
+              </se:Mark>
+              <se:Size>
+                <se:SvgParameter name="size">3</se:SvgParameter>
+              </se:Size>
+            </se:Graphic>
+          </se:PointSymbolizer>
+        </Rule>
+      </se:FeatureTypeStyle>
+    </sld:UserStyle>
+  </sld:NamedLayer>
+</StyledLayerDescriptor>
