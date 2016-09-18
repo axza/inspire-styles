@@ -1,9 +1,13 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!--
    Source http://inspire.jrc.ec.europa.eu/documents/Data_Specifications/INSPIRE_DataSpecification_ER_v3.0.pdf
-   http://github.com/JuergenWeichand/inspire-styles (2016-09-18 01:49:21)
+
+   XML is invalid against StyledLayerDescriptor.xsd! 
+   Element '{http://www.opengis.net/se}Literal': This element is not expected. Expected is one of ( {http://www.opengis.net/ogc}expression, {http://www.opengis.net/ogc}Add, {http://www.opengis.net/ogc}Sub, {http://www.opengis.net/ogc}Mul, {http://www.opengis.net/ogc}Div, {http://www.opengis.net/ogc}PropertyName, {http://www.opengis.net/ogc}Function, {http://www.opengis.net/ogc}Literal, {http://www.opengis.net/se}FormatNumber, {http://www.opengis.net/se}FormatDate )., line 20 
+
+   http://github.com/JuergenWeichand/inspire-styles (2016-09-18 12:48:48)
 -->
-<StyledLayerDescriptor xmlns:sld="http://www.opengis.net/sld" xmlns:ogc="http://www.opengis.net/ogc" xmlns:se="http://www.opengis.net/se" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1.0" xsi:schemaLocation="http://www.opengis.net/sld StyledLayerDescriptor.xsd">
+<sld:StyledLayerDescriptor xmlns:sld="http://www.opengis.net/sld" xmlns:ogc="http://www.opengis.net/ogc" xmlns:se="http://www.opengis.net/se" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1.0" xsi:schemaLocation="http://www.opengis.net/sld http://schemas.opengis.net/sld/1.1.0/StyledLayerDescriptor.xsd">
   <sld:NamedLayer>
     <se:Name> ER.EnergyStatisticalUnit.Default </se:Name>
     <sld:UserStyle>
@@ -35,4 +39,4 @@
       </se:FeatureTypeStyle>
     </sld:UserStyle>
   </sld:NamedLayer>
-</StyledLayerDescriptor>
+</sld:StyledLayerDescriptor>

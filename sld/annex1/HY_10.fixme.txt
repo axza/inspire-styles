@@ -1,4 +1,4 @@
-<StyledLayerDescriptor version="1.1.0" xsi:schemaLocation="http://www.opengis.net/sld StyledLayerDescriptor.xsd" xmlns:sld="http://www.opengis.net/sld" xmlns:ogc="http://www.opengis.net/ogc" xmlns:se="http://www.opengis.net/se" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><sld:NamedLayer>
+<sld:StyledLayerDescriptor version="1.1.0" xsi:schemaLocation="http://www.opengis.net/sld http://schemas.opengis.net/sld/1.1.0/StyledLayerDescriptor.xsd" xmlns:sld="http://www.opengis.net/sld" xmlns:ogc="http://www.opengis.net/ogc" xmlns:se="http://www.opengis.net/se" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><sld:NamedLayer>
 <se:Name>HY.PhysicalWaters.Waterbodies</se:Name>
 <sld:UserStyle>
 <se:Name> HY.PhysicalWaters.Waterbodies.Man.Made </se:Name>
@@ -147,4 +147,4 @@ bodies are depicted using the<!-- Delineation is known, NATURAL  -->
 </se:Rule>
 </se:FeatureTypeStyle>
 </sld:UserStyle>
-</sld:NamedLayer></StyledLayerDescriptor>
+</sld:NamedLayer></sld:StyledLayerDescriptor>

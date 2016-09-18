@@ -1,9 +1,13 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!--
    Source http://inspire.jrc.ec.europa.eu/documents/Data_Specifications/INSPIRE_DataSpecification_AU_v3.1.pdf
-   http://github.com/JuergenWeichand/inspire-styles (2016-09-18 01:47:46)
+
+   XML is invalid against StyledLayerDescriptor.xsd! 
+   Element '{http://www.opengis.net/sld}CssParameter': This element is not expected. Expected is ( {http://www.opengis.net/se}SvgParameter )., line 24 
+
+   http://github.com/JuergenWeichand/inspire-styles (2016-09-18 12:48:18)
 -->
-<StyledLayerDescriptor xmlns:sld="http://www.opengis.net/sld" xmlns:ogc="http://www.opengis.net/ogc" xmlns:se="http://www.opengis.net/se" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1.0" xsi:schemaLocation="http://www.opengis.net/sld StyledLayerDescriptor.xsd">
+<sld:StyledLayerDescriptor xmlns:sld="http://www.opengis.net/sld" xmlns:ogc="http://www.opengis.net/ogc" xmlns:se="http://www.opengis.net/se" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1.0" xsi:schemaLocation="http://www.opengis.net/sld http://schemas.opengis.net/sld/1.1.0/StyledLayerDescriptor.xsd">
   <sld:NamedLayer>
     <se:Name>AU.Baseline</se:Name>
     <sld:UserStyle>
@@ -33,4 +37,4 @@ line.
       </se:FeatureTypeStyle>
     </sld:UserStyle>
   </sld:NamedLayer>
-</StyledLayerDescriptor>
+</sld:StyledLayerDescriptor>
