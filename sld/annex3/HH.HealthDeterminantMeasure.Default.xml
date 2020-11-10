@@ -53,9 +53,7 @@
                   <se:SvgParameter name="fill">#0000ff</se:SvgParameter>
                 </se:Fill>
               </se:Mark>
-              <se:Size>
-                <se:SvgParameter name="size">3</se:SvgParameter>
-              </se:Size>
+              <se:Size>3</se:Size>
             </se:Graphic>
           </se:PointSymbolizer>
         </Rule>
